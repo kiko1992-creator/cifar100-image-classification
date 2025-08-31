@@ -13,3 +13,9 @@ CNN baseline + EfficientNetV2B0 transfer learning in Keras/TensorFlow.
 ## Quickstart
 ```bash
 pip install -r requirements.txt
+
+# EfficientNetV2B0 transfer model
+python predict.py path/to/image.jpg --weights final_efficientnetv2b0.keras
+
+# Or the small CNN baseline
+python predict.py path/to/image.jpg --weights final_cifar100_cnn.keras
