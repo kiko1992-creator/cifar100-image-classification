@@ -1,4 +1,9 @@
 # CIFAR-100 Image Classification
+## Weights & Releases
+
+Get the latest trained weights from the **[Releases](../../releases/latest)** page:
+- [`final_efficientnetv2b0.keras`](../../releases/latest/download/final_efficientnetv2b0.keras) — transfer model (EfficientNetV2B0)
+- [`final_cifar100_cnn.keras`](../../releases/latest/download/final_cifar100_cnn.keras) — baseline CNN
 
 CNN baseline + EfficientNetV2B0 transfer learning in Keras/TensorFlow.
 - Training notebook lives in `notebooks/`
