@@ -33,29 +33,27 @@ predict.py # inference script (CLI)
 requirements.txt # dependencies
 LICENSE # MIT License
 
-yaml
-Copy code
-
 ---
 
 ## Quickstart
 
 ```bash
 pip install -r requirements.txt
-EfficientNetV2B0 (transfer) model
-bash
-Copy code
+
+## EfficientNetV2B0 (transfer) model
+
 python predict.py --image path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
-Or the small CNN baseline
-bash
-Copy code
+
+## Or the small CNN baseline
+
 python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
-Load a model in Python
-python
-Copy code
+
+## Load a model in Python
+
 import tensorflow as tf
 m = tf.keras.models.load_model("final_efficientnetv2b0.keras")  # or "final_cifar100_cnn.keras"
-Results
+
+## Results
 EfficientNetV2B0 (transfer learning) significantly outperformed the small CNN baseline.
 
 Top-1 accuracy: ~78.2%
@@ -78,7 +76,6 @@ Confusion Matrix (normalized)
 
 Reproduce / Train (Colab)
 Open the training notebook on Colab:
-Open in Colab
 
 Notes
 Inputs are resized to 224×224, then preprocessed with the EfficientNetV2 preprocess layer before the backbone.
