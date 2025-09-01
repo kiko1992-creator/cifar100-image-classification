@@ -41,21 +41,8 @@ releases/             # Model weights (via GitHub Releases)
 requirements.txt      # Dependencies
 predict.py            # Inference script (CLI)
 LICENSE               # MIT License
-
 ---
-## Quickstart
-
-```bash
-pip install -r requirements.txt
-
-# EfficientNetV2B0 (transfer) model
-python predict.py path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
-
-# Or the small CNN baseline
-python predict.py path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
-
 ## Load a model in Python
-
 import tensorflow as tf
 m = tf.keras.models.load_model("final_efficientnetv2b0.keras")  # or "final_cifar100_cnn.keras"
 
@@ -75,8 +62,7 @@ results/metrics_cnn.json
 results/classification_report.txt
 
 Confusion Matrix (normalized)
-
-Notes
+## Notes
 Inputs are resized to 224×224, then preprocessed with the EfficientNetV2 preprocess layer before the backbone.
 
 Fine-tuning uses staged unfreezing with a lower learning rate.
