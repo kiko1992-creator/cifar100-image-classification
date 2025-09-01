@@ -10,14 +10,29 @@ It compares a small CNN with **EfficientNetV2B0** transfer learning, including t
 
 ---
 
-## Weights & Releases
+Get the latest trained weights from the **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** page:
 
-Get the latest trained weights from the **[Releases](../../releases/latest)** page:
+- **Transfer model (EfficientNetV2B0)** — [final_efficientnetv2b0.keras](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest/download/final_efficientnetv2b0.keras)
+- **Baseline CNN** — [final_cifar100_cnn.keras](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest/download/final_cifar100_cnn.keras)
 
-- **`final_efficientnetv2b0.keras`** — transfer model (EfficientNetV2B0)  
-- **`final_cifar100_cnn.keras`** — baseline CNN
+**Open in Colab**
 
-> Large weight files live in *Releases* to avoid the 25 MB repo limit.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiko1992-creator/cifar100-image-classification/blob/main/notebooks/image%20classification%20final.ipynb)
+
+---
+
+### Inference (CLI)
+
+Download a weight file from **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** (see links above), then run:
+
+```bash
+pip install -r requirements.txt
+
+# EfficientNetV2B0 (transfer model)
+python predict.py --image path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
+
+# Or the small CNN baseline
+python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
 
 ---
 
