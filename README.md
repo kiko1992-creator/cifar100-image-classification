@@ -22,14 +22,15 @@ Get the latest trained weights from the **[Releases](https://github.com/kiko1992
 
 Download a weight file from **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** (see links above), then run:
 ```bash
-# 1) Install deps (terminal)
+# Install deps (terminal)
 pip install -r requirements.txt
 
-# 2) Predict with transfer model
+# EfficientNetV2B0 (transfer) model
 python predict.py --image path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
 
-# 3) Or with the small CNN baseline
+# Small CNN baseline
 python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
+
 ---
 ## Repository layout
 
