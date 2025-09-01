@@ -1,3 +1,5 @@
+This project implements CIFAR-100 image classification with TensorFlow/Keras. It compares a baseline CNN with EfficientNetV2B0 transfer learning, including preprocessing, fine-tuning, and evaluation.
+
 # CIFAR-100 Image Classification  
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)  
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)  
@@ -51,4 +53,10 @@ Artifacts:
 ### Example Prediction
 Input image → Model says: "apple" (confidence 92%)
 ![Example](results/sample_prediction.png)
+
+📂 notebooks/   → Training notebooks  
+📂 results/     → Metrics, confusion matrix, reports  
+📂 releases/    → Model weights (via GitHub Releases)  
+requirements.txt → Dependencies  
+predict.py       → Inference script
 
