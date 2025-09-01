@@ -38,15 +38,17 @@ python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras -
 
 ## Repository layout
 
-notebooks/ # training notebook(s)
-results/ # metrics, plots, confusion matrix, reports
+notebooks/            # Training notebooks
+results/              # Metrics, plots, confusion matrix, reports
 ├─ metrics_transfer.json
 ├─ metrics_cnn.json
 ├─ classification_report.txt
 └─ confusion_matrix.png
-predict.py # inference script (CLI)
-requirements.txt # dependencies
-LICENSE # MIT License
+releases/             # Model weights (via GitHub Releases)
+requirements.txt      # Dependencies
+predict.py            # Inference script (CLI)
+LICENSE               # MIT License
+
 
 ---
 
@@ -55,13 +57,12 @@ LICENSE # MIT License
 ```bash
 pip install -r requirements.txt
 
-## EfficientNetV2B0 (transfer) model
+# EfficientNetV2B0 (transfer) model
+python predict.py path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
 
-python predict.py --image path/to/image.jpg --weights final_efficientnetv2b0.keras --topk 5
+# Or the small CNN baseline
+python predict.py path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
 
-## Or the small CNN baseline
-
-python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
 
 ## Load a model in Python
 
