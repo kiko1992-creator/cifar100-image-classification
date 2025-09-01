@@ -53,15 +53,13 @@ Top-1 accuracy: ~78.2%
 
 Top-5 accuracy: ~95.9%
 
-Artifacts (see the results/ folder):
+Artifacts (see the `results/` folder):
+- [`results/metrics_transfer.json`](results/metrics_transfer.json)
+- [`results/metrics_cnn.json`](results/metrics_cnn.json)
+- [`results/classification_report.txt`](results/classification_report.txt)
 
-results/metrics_transfer.json
-
-results/metrics_cnn.json
-
-results/classification_report.txt
-
-Confusion Matrix (normalized)
+**Confusion Matrix (normalized)**
+![Confusion Matrix](results/confusion_matrix.png)
 ## Notes
 Inputs are resized to 224×224, then preprocessed with the EfficientNetV2 preprocess layer before the backbone.
 
