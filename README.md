@@ -85,13 +85,6 @@ results/classification_report.txt
 
 Confusion Matrix (normalized)
 
-
-(Optional) Add an example prediction image at results/sample_prediction.png and show it here:
-![Example](results/sample_prediction.png)
-
-Reproduce / Train (Colab)
-Open the training notebook on Colab:
-
 Notes
 Inputs are resized to 224×224, then preprocessed with the EfficientNetV2 preprocess layer before the backbone.
 
