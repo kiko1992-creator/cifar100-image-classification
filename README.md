@@ -2,6 +2,7 @@
 
 This project implements CIFAR-100 image classification with TensorFlow/Keras.  
 It compares a small CNN with **EfficientNetV2B0** transfer learning, including the proper resize→preprocess pipeline, staged fine-tuning, and evaluation.
+
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -18,6 +19,7 @@ Get the latest trained weights from the **[Releases](https://github.com/kiko1992
 
 ---
 ### Inference (CLI)
+
 Download a weight file from **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** (see links above), then run:
 ```bash
 # 1) Install deps (terminal)
@@ -43,6 +45,7 @@ predict.py            # Inference script (CLI)
 LICENSE               # MIT License
 ---
 ## Load a model in Python
+
 import tensorflow as tf
 m = tf.keras.models.load_model("final_efficientnetv2b0.keras")  # or "final_cifar100_cnn.keras"
 
@@ -53,7 +56,8 @@ Top-1 accuracy: ~78.2%
 
 Top-5 accuracy: ~95.9%
 
-Artifacts (see the `results/` folder):
+## Artifacts (see the `results/` folder):
+
 - [`results/metrics_transfer.json`](results/metrics_transfer.json)
 - [`results/metrics_cnn.json`](results/metrics_cnn.json)
 - [`results/classification_report.txt`](results/classification_report.txt)
