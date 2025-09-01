@@ -2,29 +2,24 @@
 
 This project implements CIFAR-100 image classification with TensorFlow/Keras.  
 It compares a small CNN with **EfficientNetV2B0** transfer learning, including the proper resize→preprocess pipeline, staged fine-tuning, and evaluation.
-
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiko1992-creator/cifar100-image-classification/blob/main/notebooks/image%20classification%20final.ipynb)
 
 ---
-
 Get the latest trained weights from the **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** page:
 
 - **Transfer model (EfficientNetV2B0)** — [final_efficientnetv2b0.keras](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest/download/final_efficientnetv2b0.keras)
 - **Baseline CNN** — [final_cifar100_cnn.keras](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest/download/final_cifar100_cnn.keras)
 
 **Open in Colab**
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiko1992-creator/cifar100-image-classification/blob/main/notebooks/image%20classification%20final.ipynb)
 
 ---
-
 ### Inference (CLI)
 
 Download a weight file from **[Releases](https://github.com/kiko1992-creator/cifar100-image-classification/releases/latest)** (see links above), then run:
-
 ```bash
 pip install -r requirements.txt
 
@@ -35,7 +30,6 @@ python predict.py --image path/to/image.jpg --weights final_efficientnetv2b0.ker
 python predict.py --image path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
 
 ---
-
 ## Repository layout
 
 notebooks/            # Training notebooks
@@ -49,9 +43,7 @@ requirements.txt      # Dependencies
 predict.py            # Inference script (CLI)
 LICENSE               # MIT License
 
-
 ---
-
 ## Quickstart
 
 ```bash
@@ -62,7 +54,6 @@ python predict.py path/to/image.jpg --weights final_efficientnetv2b0.keras --top
 
 # Or the small CNN baseline
 python predict.py path/to/image.jpg --weights final_cifar100_cnn.keras --topk 5
-
 
 ## Load a model in Python
 
