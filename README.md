@@ -1,4 +1,8 @@
-CIFAR-100 image classification with TensorFlow/Keras. Includes CNN baseline and EfficientNetV2B0 transfer learning, staged fine-tuning, and evaluation metrics.
+# CIFAR-100 Image Classification  
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)  
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)  
+![License: MIT](https://img.shields.io/badge/License-MIT-green)  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiko1992-creator/cifar100-image-classification/blob/main/notebooks/image%20classification%20final.ipynb)  
 
 Get the latest trained weights from the **[Releases](../../releases/latest)** page:
 - [`final_efficientnetv2b0.keras`](../../releases/latest/download/final_efficientnetv2b0.keras) — transfer model (EfficientNetV2B0)
@@ -43,3 +47,8 @@ Artifacts:
 
 ### Confusion Matrix (normalized)
 ![Confusion Matrix](results/confusion_matrix.png)
+
+### Example Prediction
+Input image → Model says: "apple" (confidence 92%)
+![Example](results/sample_prediction.png)
+
